@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Dog Donor Registration Form</title>
+        <link rel="stylesheet" type="text/css" href="../css/master.css">
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="navLeft">
+                <a href="dogDonorRegistrationForm.html" class="btn">Register Your Dog</a>
+                <a href="viewDonorEligibilityAndStatus.html" class="btn">View Donation Eligibility/Status</a>
+            </div>
+            <div class="navButtons">
+                <div class="userProfile">
+                    <div class="profileIcon">
+                        <img src="../images/profile-picture.png">
+                    </div>
+                    <div class="profileText">
+                        <span class="profileLabel">Logged in as:</span>
+                        <span class="profileName">John Owner</span>
+                    </div>
+                </div>
+                <a href="../index.html" class="btn btnLogin">Sign Out</a>
+            </div>
+        </nav>
+        <div class="container">
+            <form id="dogRegoForm">
+                <h2>Please enter the following information about your dog</h2>
+
+                <p id=formInstructions style="font-size: 100%;">* indicates a required field</p>
+                
+                <p>
+                    <label for="dogOwner">Dog Owner Name: </label>
+                    <input type="text" id="dogOwner" name="dogOwner" size="30" maxlength="50" value="John Doe" readonly>
+                </p>
+                <p>
+                    <label for="dogName">Dog's Name: *</label>
+                    <input type="text" id="dogName" name="dogName" size="30" maxlength="50" placeholder="name" required aria-required="true">
+                </p>
+                <p>
+                    <label for="dogBreed">Dog Breed: *</label>
+                    <input type="text" id="dogBreed" name="dogBreed" size="30" maxlength="50" placeholder="breed" required aria-required="true">
+                </p>
+                <p>
+                    <label for="dogAge">Age (years): *</label>
+                    <input type="number" id="dogAge" name="dogAge" maxlength="3" min="1" max="20" placeholder="age" required aria-required="true">
+                </p>
+                <p>
+                    <label for="dogWeight">Weight (kg): *</label>
+                    <input type="number" id="dogWeight" name="dogWeight" maxlength="3" min="1" max="100" placeholder="weight" required aria-required="true">
+                </p>
+                <fieldset>
+                    <legend>Sex: *</legend>
+                    <label for="dogSexMale" class="checkAlign">
+                        <input type="radio" class="checkAlign" name="dogSex" id="dogSexMale" value="Male" required aria-required="true">
+                        Male
+                    </label>
+                    <label for="dogSexFemale" class="checkAlign">
+                        <input type="radio" class="checkAlign" name="dogSex" id="dogSexFemale" value="Female" required aria-required="true">
+                        Female
+                    </label>
+                </fieldset>
+                <p>
+                    <label for="dogBloodType">Blood Type: *</label>
+                    <select id="dogBloodType" name="dogBloodType" size="1">
+                        <option value="" selected disabled>-- Select blood type --</option>
+                        <option value="DEA 1.1 Positive">DEA 1.1 Positive</option>
+                        <option value="DEA 1.1 Negative">DEA 1.1 Negative (Universal Donor)</option>
+                        <option value="DEA 1.2 Positive">DEA 1.2 Positive</option>
+                        <option value="DEA 1.2 Negative">DEA 1.2 Negative</option>
+                        <option value="DEA 3 Positive">DEA 3 Positive</option>
+                        <option value="DEA 3 Negative">DEA 3 Negative</option>
+                        <option value="DEA 4">DEA 4</option>
+                        <option value="DEA 5 Positive">DEA 5 Positive</option>
+                        <option value="DEA 5 Negative">DEA 5 Negative</option>
+                        <option value="DEA 7 Positive">DEA 7 Positive</option>
+                        <option value="DEA 7 Negative">DEA 7 Negative</option>
+                        <option value="other">Other (specify in notes)</option>
+                    </select>
+                </p>
+                <br>
+                <h3>If you cannot honestly agree to the following declarations,<br>DO NOT submit this form</h3>
+                
+                <p>
+                    <label for="vaccDec" class="checkboxList">
+                        I certify that the dog I am registering has received all core Vaccinations * 
+                        <input type="checkbox" name="vaccDec" id="vaccDec" value="false" required aria-required="true">
+                    </label>
+                </p>
+                <p>If your dog has received any additional vaccinations, list them here:</p>
+                <p><textarea name="ineligibilityReason" id="ineligibilityReason" rows="3" cols="30" placeholder=""></textarea></p>
+                <p>
+                    <label for="healthDec" class="checkboxList">
+                        I certify that my dog is of good health and has no notable conditions or the details of any are enclosed as a health report from a clinician. *
+                        <input type="checkbox" name="healthDec" id="healthDec" value="false" required aria-required="true">
+                    </label>
+                </p>
+                <p>Submit a Health Report (if applicable):</p>
+                <p><input type="file" id="healthReport"></p>
+                    
+                <p><input class="registerBtn" type="submit" name="submit" id="submitBtn"></p>
+            </form>
+        </div>
+
+        <footer>
+            <script src="../scripts/footer.js"></script> 
+        </footer>
+    </body>
+</html>
