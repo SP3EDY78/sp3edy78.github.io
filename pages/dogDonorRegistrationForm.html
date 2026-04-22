@@ -26,9 +26,9 @@
             </div>
         </nav>
         <div class="container">
+            <h2>Dog Donor Registration</h2>
             <form id="dogRegoForm">
-                <h2>Please enter the following information about your dog</h2>
-
+                <h3>Please enter the following information about your dog</h3>
                 <p id=formInstructions style="font-size: 100%;">* indicates a required field</p>
                 
                 <p>
@@ -51,20 +51,20 @@
                     <label for="dogWeight">Weight (kg): *</label>
                     <input type="number" id="dogWeight" name="dogWeight" maxlength="3" min="1" max="100" placeholder="weight" required aria-required="true">
                 </p>
-                <fieldset>
+                <fieldset class="checkAlign">
                     <legend>Sex: *</legend>
-                    <label for="dogSexMale" class="checkAlign">
-                        <input type="radio" class="checkAlign" name="dogSex" id="dogSexMale" value="Male" required aria-required="true">
+                    <label for="dogSexMale">
+                        <input type="radio" name="dogSex" id="dogSexMale" value="Male" required aria-required="true">
                         Male
-                    </label>
-                    <label for="dogSexFemale" class="checkAlign">
-                        <input type="radio" class="checkAlign" name="dogSex" id="dogSexFemale" value="Female" required aria-required="true">
+                    </label><br>
+                    <label for="dogSexFemale">
+                        <input type="radio" name="dogSex" id="dogSexFemale" value="Female" required aria-required="true">
                         Female
                     </label>
                 </fieldset>
                 <p>
                     <label for="dogBloodType">Blood Type: *</label>
-                    <select id="dogBloodType" name="dogBloodType" size="1">
+                    <select id="dogBloodType" name="dogBloodType" size="1" required>
                         <option value="" selected disabled>-- Select blood type --</option>
                         <option value="DEA 1.1 Positive">DEA 1.1 Positive</option>
                         <option value="DEA 1.1 Negative">DEA 1.1 Negative (Universal Donor)</option>
